@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "dc4c78c4-5414-487a-9b89-c221abe523b4",
+		"name": "Simple API overview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23819789-dc4c78c4-5414-487a-9b89-c221abe523b4"
+	},
+	"item": [
+		{
+			"name": "List API versions",
+			"id": "122efef9-6448-44c2-a7a2-27ca8332e24e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "36f07e3a-187a-4d75-aa38-e737ae42e28a",
+					"name": "200 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"versions\": [\n    {\n      \"status\": \"CURRENT\",\n      \"updated\": \"2011-01-21T11:33:21Z\",\n      \"id\": \"v2.0\",\n      \"links\": [\n        {\n          \"href\": \"http://127.0.0.1:8774/v2/\",\n          \"rel\": \"self\"\n        }\n      ]\n    },\n    {\n      \"status\": \"EXPERIMENTAL\",\n      \"updated\": \"2013-07-23T11:33:21Z\",\n      \"id\": \"v3.0\",\n      \"links\": [\n        {\n          \"href\": \"http://127.0.0.1:8774/v3/\",\n          \"rel\": \"self\"\n        }\n      ]\n    }\n  ]\n}"
+				},
+				{
+					"id": "058c53c2-b3b2-49ef-9c53-34fa52564b87",
+					"name": "300 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "Multiple Choices",
+					"code": 300,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "\"{\\n \\\"versions\\\": [\\n       {\\n         \\\"status\\\": \\\"CURRENT\\\",\\n         \\\"updated\\\": \\\"2011-01-21T11:33:21Z\\\",\\n         \\\"id\\\": \\\"v2.0\\\",\\n         \\\"links\\\": [\\n             {\\n                 \\\"href\\\": \\\"http://127.0.0.1:8774/v2/\\\",\\n                 \\\"rel\\\": \\\"self\\\"\\n             }\\n         ]\\n     },\\n     {\\n         \\\"status\\\": \\\"EXPERIMENTAL\\\",\\n         \\\"updated\\\": \\\"2013-07-23T11:33:21Z\\\",\\n         \\\"id\\\": \\\"v3.0\\\",\\n         \\\"links\\\": [\\n             {\\n                 \\\"href\\\": \\\"http://127.0.0.1:8774/v3/\\\",\\n                 \\\"rel\\\": \\\"self\\\"\\n             }\\n         ]\\n     }\\n ]\\n}\\n\""
+				}
+			]
+		},
+		{
+			"name": "Show API version details",
+			"id": "10e85e73-5ca5-4500-a3d7-0992bc59717d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/v2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v2"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "94eadc66-48bc-44a1-9cec-dd187e451c6b",
+					"name": "200 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"version\": {\n    \"status\": \"CURRENT\",\n    \"updated\": \"2011-01-21T11:33:21Z\",\n    \"media-types\": [\n      {\n        \"base\": \"application/xml\",\n        \"type\": \"application/vnd.openstack.compute+xml;version=2\"\n      },\n      {\n        \"base\": \"application/json\",\n        \"type\": \"application/vnd.openstack.compute+json;version=2\"\n      }\n    ],\n    \"id\": \"v2.0\",\n    \"links\": [\n      {\n        \"href\": \"http://127.0.0.1:8774/v2/\",\n        \"rel\": \"self\"\n      },\n      {\n        \"href\": \"http://docs.openstack.org/api/openstack-compute/2/os-compute-devguide-2.pdf\",\n        \"type\": \"application/pdf\",\n        \"rel\": \"describedby\"\n      },\n      {\n        \"href\": \"http://docs.openstack.org/api/openstack-compute/2/wadl/os-compute-2.wadl\",\n        \"type\": \"application/vnd.sun.wadl+xml\",\n        \"rel\": \"describedby\"\n      },\n      {\n        \"href\": \"http://docs.openstack.org/api/openstack-compute/2/wadl/os-compute-2.wadl\",\n        \"type\": \"application/vnd.sun.wadl+xml\",\n        \"rel\": \"describedby\"\n      }\n    ]\n  }\n}"
+				},
+				{
+					"id": "37be99da-467d-40cb-b445-535ee981ea5e",
+					"name": "203 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2"
+							]
+						}
+					},
+					"status": "Non-Authoritative Information (since HTTP/1.1)",
+					"code": 203,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"version\": {\n    \"status\": \"CURRENT\",\n    \"updated\": \"2011-01-21T11:33:21Z\",\n    \"media-types\": [\n      {\n        \"base\": \"application/xml\",\n        \"type\": \"application/vnd.openstack.compute+xml;version=2\"\n      },\n      {\n        \"base\": \"application/json\",\n        \"type\": \"application/vnd.openstack.compute+json;version=2\"\n      }\n    ],\n    \"id\": \"v2.0\",\n    \"links\": [\n      {\n        \"href\": \"http://23.253.228.211:8774/v2/\",\n        \"rel\": \"self\"\n      },\n      {\n        \"href\": \"http://docs.openstack.org/api/openstack-compute/2/os-compute-devguide-2.pdf\",\n        \"type\": \"application/pdf\",\n        \"rel\": \"describedby\"\n      },\n      {\n        \"href\": \"http://docs.openstack.org/api/openstack-compute/2/wadl/os-compute-2.wadl\",\n        \"type\": \"application/vnd.sun.wadl+xml\",\n        \"rel\": \"describedby\"\n      }\n    ]\n  }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "2bb0a582-59df-478f-81d3-38654457434f",
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
